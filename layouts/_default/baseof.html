@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>
+      {{ .Site.Title }}
+    </title>
+    {{ with resources.Get "css/main.css" | postCSS }}
+      <link rel="stylesheet" href="{{ .RelPermalink }}">
+    {{ end }}
+  </head>
+  <body>
+    {{ block "main" . }}
+      <!-- Main Content -->
+    {{ end }}
+  </body>
+</html>
