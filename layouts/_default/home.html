@@ -1,12 +1,15 @@
 {{ define "main" }}
   {{ range .Site.Sections }}
-    <h2 class="text-lg">{{ .Title }}</h2>
-    {{ range .Pages.Limit 5 }}
-      <article>
-        <h3>
-          <a href="{{ .RelPermalink }}">{{ .Title }}</a>
-        </h3>
-      </article>
-    {{ end }}    
+    <h2>{{ .Title }}</h2>
+    <div class="mb-4">
+      {{ range .Pages.Limit 5 }}
+        <article>
+          <span>{{ time.Format "2006/1/2" .Date }}</span>
+          <a href="{{ .RelPermalink }}" class="inline-block ml-2 underline">
+            {{ .Title }}
+          </a>
+        </article>
+      {{ end }}    
+    </div>
   {{ end }}
 {{ end }}
