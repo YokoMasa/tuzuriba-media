@@ -6,6 +6,9 @@
     <title>
       {{ .Site.Title }}
     </title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;700&display=swap" rel="stylesheet">
 
     {{ if .Site.IsServer }}
       {{ $seed := "weqklrjfmnk213409ufasdfhnlk3j4bladsfsl" }}
@@ -24,15 +27,31 @@
       }}
       <link rel="stylesheet" href="{{ $style.RelPermalink }}">
     {{ end }}
-    
-  </head>
-  <body>
-    <header class="fixed top-0 w-full h-[50px] bg-green-900">
 
+  </head>
+  <body class="bg-stone-50 font-serif">
+
+    <header class="fixed top-0 w-full h-[60px] bg-stone-100 flex justify-center">
+      <div class="w-full h-full max-w-[1000px] px-4 flex items-center">
+        <a class="text-lg" href="/">
+          日常つづり場だより
+        </a>
+
+        <nav class="grow h-full flex flex-row-reverse items-center text-sm underline">
+          <a href="https://lp.tuzuriba.com">
+            日常つづり場→
+          </a>
+        </nav>
+      </div>
     </header>
 
-    {{ block "main" . }}
-      <!-- Main Content -->
-    {{ end }}
+    <main class="w-full mt-[60px] flex justify-center">
+      <div class="w-full max-w-[1000px] p-4">
+        {{ block "main" . }}
+          <!-- Main Content -->
+        {{ end }}
+      </div>
+    </main>
+
   </body>
 </html>
