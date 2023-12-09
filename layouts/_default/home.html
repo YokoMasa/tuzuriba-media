@@ -1,4 +1,12 @@
 {{ define "main" }}
-  <h2 class="text-lg">ニュース</h2>
-  <h2 class="text-lg">コラム</h2>
+  {{ range .Site.Sections }}
+    <h2 class="text-lg">{{ .Title }}</h2>
+    {{ range .Pages.Limit 5 }}
+      <article>
+        <h3>
+          <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+        </h3>
+      </article>
+    {{ end }}    
+  {{ end }}
 {{ end }}
