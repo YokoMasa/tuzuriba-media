@@ -9,8 +9,8 @@
   <div class="mt-6">
     {{ range .Pages }}
       <article>
-        <span>{{ time.Format "2006/1/2" .Date }}</span>
-        <a href="{{ .RelPermalink }}" class="inline-block ml-2 underline">
+        <span>{{ time.Format "2006/1/2" .Date }}&nbsp;</span>
+        <a href="{{ .RelPermalink }}" class="ml-2 underline">
           {{ .Title }}
         </a>
       </article>
