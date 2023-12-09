@@ -6,11 +6,31 @@
     <title>
       {{ .Site.Title }}
     </title>
-    {{ with resources.Get "css/main.css" | postCSS }}
-      <link rel="stylesheet" href="{{ .RelPermalink }}">
+
+    {{ if .Site.IsServer }}
+      {{ $seed := "weqklrjfmnk213409ufasdfhnlk3j4bladsfsl" }}
+      {{ $random := delimit (shuffle (split (md5 $seed) "" )) "" }}
+      {{
+      $style := resources.Get "css/main.css"
+      | resources.PostCSS
+      | resources.ExecuteAsTemplate (printf "css/main.dev.%s.css" $random) $random
+      }}
+      <link rel="stylesheet" href="{{ $style.RelPermalink }}">
+    {{ else }}
+      {{
+      $style := resources.Get "css/main.css"
+          | resources.PostCSS
+          | resources.Minify
+      }}
+      <link rel="stylesheet" href="{{ $style.RelPermalink }}">
     {{ end }}
+    
   </head>
   <body>
+    <header class="fixed top-0 w-full h-[50px] bg-green-900">
+
+    </header>
+
     {{ block "main" . }}
       <!-- Main Content -->
     {{ end }}
