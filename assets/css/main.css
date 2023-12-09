@@ -33,4 +33,8 @@
     @apply pl-6;
   }
 
+  a {
+    @apply underline;
+  }
+
 }
