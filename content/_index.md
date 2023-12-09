@@ -1,4 +1,5 @@
 ---
-description: "Main page"
+title: "ホーム"
+description: "ホーム"
 draft: false
 ---
