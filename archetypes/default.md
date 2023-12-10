@@ -1,5 +1,6 @@
 +++
 title = '{{ replace .File.ContentBaseName "-" " " | title }}'
+description = '説明'
 date = {{ .Date }}
-draft = true
+draft = false
 +++
