@@ -4,7 +4,8 @@
 
 @layer base {
   h1 {
-    @apply text-4xl;
+    @apply text-3xl;
+    @apply md:text-4xl;
     @apply my-6;
   }
 
@@ -35,6 +36,10 @@
 
   a {
     @apply underline;
+  }
+
+  p {
+    @apply my-4
   }
 
 }

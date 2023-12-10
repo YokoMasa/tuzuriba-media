@@ -3,7 +3,7 @@
     <h2>{{ .Title }}</h2>
     <div class="mb-4">
       {{ range .Pages.Limit 5 }}
-        <article>
+        <article class="my-2">
           <span>{{ time.Format "2006/1/2" .Date }}&nbsp;</span>
           <a href="{{ .RelPermalink }}" class="ml-2 underline">
             {{ .Title }}
