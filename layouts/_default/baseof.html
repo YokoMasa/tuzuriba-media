@@ -29,6 +29,23 @@
       <link rel="stylesheet" href="{{ $style.RelPermalink }}">
     {{ end }}
 
+    <script>
+      window.addEventListener("load", () => {
+        const hamburgerButton = document.getElementById("hamburger-button");
+        const closeButton = document.getElementById("close-button");
+        const navPane = document.getElementById("nav-pane");
+
+        hamburgerButton.addEventListener("click", () => {
+          const navPaneRect = navPane.getBoundingClientRect();
+          console.log(navPaneRect);
+          navPane.style.left = "calc(100% - 200px)";
+        });
+
+        closeButton.addEventListener("click", () => {
+          navPane.style.left = "100%";
+        })
+      });
+    </script>
   </head>
   <body class="bg-stone-50 font-serif">
 
@@ -38,14 +55,32 @@
           日常つづり場だより
         </a>
 
-        <nav class="md:static md:grow md:h-full md:flex md:flex-row-reverse md:items-center md:text-sm fixed top-0 h-screen left-full">
-          <a href="https://lp.tuzuriba.com" class="no-underline">
+        <nav id="nav-pane" class="fixed top-0 left-full h-screen w-[200px] z-50 bg-stone-50 text-sm shadow-lg transition-all md:static md:flex md:grow md:w-auto md:h-full md:flex-row-reverse md:items-center md:shadow-none md:bg-inherit">
+          <div class="h-[60px] flex items-center justify-end pr-4 md:hidden">
+            <button id="close-button">
+              <svg xmlns="http://www.w3.org/2000/svg" height="32" viewBox="0 0 100 100" width="32">
+                <path d="M 25 25 L 75 75 M 25 75 L 75 25" fill="none" stroke-width="2" class="stroke-black"/>
+              </svg>
+            </button>
+          </div>
+          <a href="https://lp.tuzuriba.com" class="block text-end pr-4 no-underline md:p-0 md:inline">
             日常つづり場→
           </a>
-          <a href="/about" class="mr-6 no-underline">
+          <a href="/" class="block text-end mt-6 pr-4 no-underline md:hidden">
+            トップ
+          </a>
+          <a href="/about" class="block text-end mt-6 pr-4 no-underline md:inline md:p-0 md:mt-0 md:mr-6">
             このサイトについて
           </a>
         </nav>
+
+        <div class="flex flex-row-reverse grow h-full md:hidden">
+          <button id="hamburger-button">
+            <svg xmlns="http://www.w3.org/2000/svg" height="32" viewBox="0 0 100 100" width="32">
+              <path d="M 20 30 H 80 M 20 50 H 80 M 20 70 H 80" fill="none" stroke-width="2" class="stroke-black"/>
+            </svg>
+          </button>
+        </div>
       </div>
     </header>
 
