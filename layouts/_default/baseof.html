@@ -60,7 +60,7 @@
       });
     </script>
   </head>
-  <body class="bg-stone-50 font-serif">
+  <body class="bg-stone-50 font-serif flex flex-col h-screen">
 
     <header class="fixed top-0 w-full h-[60px] bg-stone-100 flex justify-center">
       <div class="w-full h-full max-w-[1000px] px-4 flex items-center">
@@ -69,20 +69,20 @@
         </a>
 
         <nav id="nav-pane" class="fixed top-0 left-full h-screen w-[200px] z-50 bg-stone-50 text-sm shadow-lg transition-all md:static md:flex md:grow md:w-auto md:h-full md:flex-row-reverse md:items-center md:shadow-none md:bg-inherit">
-          <div class="h-[60px] flex items-center justify-end pr-4 md:hidden">
+          <div class="h-[60px] flex items-center pl-4 md:hidden">
             <button id="close-button">
               <svg xmlns="http://www.w3.org/2000/svg" height="32" viewBox="0 0 100 100" width="32">
                 <path d="M 25 25 L 75 75 M 25 75 L 75 25" fill="none" stroke-width="2" class="stroke-black"/>
               </svg>
             </button>
           </div>
-          <a href="https://lp.tuzuriba.com" class="block mt-4 text-end pr-4 no-underline md:mt-0 md:p-0 md:inline">
+          <a href="https://lp.tuzuriba.com" class="block pl-4 mt-4 no-underline md:mt-0 md:p-0 md:inline">
             日常つづり場→
           </a>
-          <a href="/" class="block text-end mt-8 pr-4 no-underline md:hidden">
+          <a href="/" class="block pl-4 mt-8 no-underline md:hidden">
             トップ
           </a>
-          <a href="/about" class="block text-end mt-8 pr-4 no-underline md:inline md:p-0 md:mt-0 md:mr-6">
+          <a href="/about" class="block pl-4 mt-8 no-underline md:inline md:p-0 md:mt-0 md:mr-6">
             このサイトについて
           </a>
         </nav>
@@ -97,13 +97,30 @@
       </div>
     </header>
 
-    <main class="w-full mt-[60px] flex justify-center">
+    <main class="w-full mt-[60px] flex justify-center grow">
       <div class="w-full max-w-[1000px] p-4">
         {{ block "main" . }}
           <!-- Main Content -->
         {{ end }}
       </div>
     </main>
+
+    <footer class="w-full bg-stone-100 flex justify-center">
+      <div class="w-full max-w-[1000px] p-4">
+        <div class="text-lg">日常つづり場だより</div>
+        <div class="text-sm">
+          <div class="mt-4">
+            <a href="/">トップ</a>
+          </div>
+          <div class="mt-4">
+            <a href="/about">このサイトについて</a>
+          </div>
+          <div class="mt-4">
+            <a href="https://lp.tuzuriba.com">日常つづりば→</a>
+          </div>
+        </div>
+      </div>
+    </footer>
 
   </body>
 </html>
