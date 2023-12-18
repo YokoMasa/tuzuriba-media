@@ -49,6 +49,7 @@
   article img {
     @apply max-w-[200px];
     @apply h-auto;
+    @apply shadow;
   }
 
   article li {
