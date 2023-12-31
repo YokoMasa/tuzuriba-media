@@ -11,6 +11,11 @@ draft = false
 
 ※参考）[PWAとは](https://www.ntt-west.co.jp/business/glossary/words-00193.html)
 
+#### 2023/12/31追記
+Androidの場合、通常通りPlay Storeからのインストールが可能となりました。
+こちらからインストールできます。  
+[https://play.google.com/store/apps/details?id=com.tuzuriba.twa](https://play.google.com/store/apps/details?id=com.tuzuriba.twa)
+
 ## インストール手順
 ### iPhoneの場合
 1. ブラウザで[日常つづり場](https://tuzuriba.com)を開き、共有ボタン（四角に上向きの矢印が書いてあるボタン）をクリックします。
