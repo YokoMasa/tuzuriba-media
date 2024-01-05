@@ -1,6 +1,8 @@
 {{ define "main" }}
   {{ range .Site.Sections }}
-    <h2>{{ .Title }}</h2>
+    <a href="{{ .RelPermalink }}" class="no-underline">
+      <h2>{{ .Title }}</h2>
+    </a>
     <div class="mb-4">
       {{ range .Pages.Limit 5 }}
         <article class="my-2">

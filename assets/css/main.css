@@ -56,4 +56,14 @@
     @apply mt-4;
   }
 
+  article blockquote {
+    @apply border-l-2;
+    @apply border-stone-300;
+    @apply ml-1;
+    @apply pl-2;
+    @apply text-stone-500;
+    @apply text-sm;
+    @apply italic;
+  }
+
 }
