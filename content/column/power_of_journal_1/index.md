@@ -26,14 +26,14 @@ Expressive Writingは下記のように行います。
 Expressive Writingを行うと、短期的には気分が落ち込むことがあります。
 しかし、Expressive Writingを行ったグループとそうでないグループを比較すると、長期的には下記のような効果があるそうです。（そのメカニズムについては諸説あるものの、まだはっきりと分かっていないそうです。）
 
-#### ◇身体・精神への効果
+### ◇身体・精神への効果
 - 抑うつの軽減
 - 病院に通う回数の減少
 - 血圧の低下
 
 など
 
-#### ◇行動への効果
+### ◇行動への効果
 - 仕事を休む回数の減少
 - 仕事を失った後新たな仕事に就くまでの期間の減少
 - 学生の場合、成績の向上
@@ -48,11 +48,11 @@ Expressive Writing自体は紙とペンさえあれば一人で行うことが�
 しかし、誰でも良いので吐き出したものを聞いてもらいたい、という場合もあるかと思います。  
 そのような場合に使えるツールを紹介いたします。
 
-#### ◇まもろうよこころ（厚生労働省のサイト）
+### ◇まもろうよこころ（厚生労働省のサイト）
 厚生労働省の[「まもろうよこころ」というサイト](https://www.mhlw.go.jp/mamorouyokokoro/soudan/sns/)に、電話やチャットで気軽に話を聞いてもらえる場が紹介されています。
 無料・匿名で土日も含め対応してくださるところもあります。
 
-#### ◇日常つづり場
+### ◇日常つづり場
 一対一の電話やチャットは気が引けるが、匿名でとりあえず誰かに聞いてほしいという場合は[日常つづり場](https://lp.tuzuriba.com/)がおすすめです。
 
 日常つづり場は、日記をつづり今同じ時間を生きている人たちと共有できる場でアカウント作成しなくても気軽に利用できます。  
@@ -68,7 +68,7 @@ Expressive Writing自体は紙とペンさえあれば一人で行うことが�
 少しずつ余裕が出てきたらこの記事で紹介したものを試してみてはいかがでしょうか。  
 何かこの記事が少しでも助けになれば幸いです。
 
-#### 注釈
+## 注釈
 <span class="text-xs">※1 ケンブリッジ大学の記事より（[https://www.cambridge.org/core/journals/advances-in-psychiatric-treatment/article/emotional-and-physical-health-benefits-of-expressive-writing/ED2976A61F5DE56B46F07A1CE9EA9F9F](https://www.cambridge.org/core/journals/advances-in-psychiatric-treatment/article/emotional-and-physical-health-benefits-of-expressive-writing/ED2976A61F5DE56B46F07A1CE9EA9F9F)）</span>
 
 <span class="text-xs">※2 関西大学での研究より（[https://cir.nii.ac.jp/crid/1050282677891902592](https://cir.nii.ac.jp/crid/1050282677891902592)）</span>

@@ -18,6 +18,10 @@
     {{ time.Format "2006/1/2" .Date }}
   </div>
 
+  {{ if compare.Ne .TableOfContents `<nav id="TableOfContents"></nav>`}}
+    {{ .TableOfContents }}
+  {{ end }}
+
   <article class="mt-4">
     {{ .Content }}
   </article>

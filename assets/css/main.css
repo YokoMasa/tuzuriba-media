@@ -68,4 +68,30 @@
     @apply italic;
   }
 
+  #TableOfContents {
+    @apply before:content-['目次'];
+    @apply bg-stone-100;
+    @apply rounded;
+    @apply p-2;
+    @apply mt-4;
+  }
+
+  #TableOfContents > ul {
+    @apply pl-0;
+    @apply text-sm;
+    @apply text-stone-600;
+  }
+
+  #TableOfContents > ul ul {
+    @apply pl-4;
+    @apply m-0;
+  }
+
+  #TableOfContents li {
+    @apply list-none;
+    @apply my-2;
+    @apply before:content-['-'];
+    @apply before:mr-2;
+  }
+
 }
