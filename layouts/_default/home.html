@@ -1,17 +1,25 @@
 {{ define "main" }}
-  {{ range .Site.Sections }}
+  {{ range .Site.Sections.ByLinkTitle }}
     <a href="{{ .RelPermalink }}" class="no-underline">
       <h2>{{ .Title }}</h2>
     </a>
     <div class="mb-4">
-      {{ range .Pages.Limit 5 }}
+      {{ $topSize := 5 }}
+
+      {{ range .Pages.Limit $topSize }}
         <article class="my-2">
           <span>{{ time.Format "2006/1/2" .Date }}&nbsp;</span>
           <a href="{{ .RelPermalink }}" class="ml-2 underline">
             {{ .Title }}
           </a>
         </article>
-      {{ end }}    
+      {{ end }}
+
+      {{ if compare.Lt $topSize .Pages.Len }}
+        <div class="my-2">
+          <a href="{{ .RelPermalink }}" class="text-sm">...もっと見る</a>
+        </div>
+      {{ end }}
     </div>
   {{ end }}
 {{ end }}
